@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <!-- setting charset to utf-8 to eliminate validation error -->
+        <meta charset="utf-8">
+        
+        <title>Contact | Justin Anderson</title>
+
+        <!-- USAF Symbol linked as favicon -->
+        <link rel="shortcut icon" href="images/favicon.ico">
+
+        <link rel="stylesheet" href="css/normalize.css" media="screen">
+        <link rel="stylesheet" href="css/main.css" media="screen">
+        <link rel="stylesheet" href="css/print.css" media="print"> 
+        <!-- including social media slider from http://www.jqueryscript.net/social-media/jQuery-Plugin-For-Floating-Social-Share-Contact-Sidebar.html -->
+        <link rel="stylesheet" href="css/contact-buttons.css">
+        <!-- using font-awesome for social bar icons -->
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">        
+        
+        <!-- Description and Keywords provided to help web crawlers index page/SEO -->
+        <meta name="description" content="Justin Anderson's Contact Us">
+        <meta name="keywords" content="Contact Us, Air Force, Officer, Justin, Anderson, JavaScript, Form">       
+        
+        <!-- link to jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <!-- JavaScript for floating social bar -->
+        <script src="js/jquery.contact-buttons.js"></script>
+        <!-- calls the linked JavaScript file to perform client-side form validation -->
+        <script src="js/form.js"></script>
+    </head>
+
+    <body>
+        
+        <header>
+            <!--  logo courtesy of logomakr.com, images for Beer graphic by <a href="http://www.freepik.com/">Freepik</a> and 
+            * Thin Stroke graphic by <a href="http://victorerixon.com">Victor Erixon</a> from <a href="http://www.flaticon.com/">Flaticon</a> are licensed under <a href="http://creativecommons.org/licenses/by/3.0/" 
+            * title="Creative Commons BY 3.0">CC BY 3.0</a>. Made with <a href="http://logomakr.com" title="Logo Maker">Logo Maker</a> -->
+            <h2 id="homelogo"><a href="index.html" title="Click me to go home"><img src="images/homelogo.png" width="556" height="131" alt="Justin Anderson Logo - navigate to Homepage"></a></h2>            
+            <!-- horizontal navigation bar across each page -->
+            <nav id="nav_menu"> 
+                <ul id="top">
+                    <li><a href="biography.html">BIOGRAPHY</a></li>
+                    <li><a href="resume.html">RESUM&Eacute;</a></li>
+                    <li><a href="#">HOBBIES</a>
+                        <ul>
+                            <li><a href="investing.html">INVESTING</a></li>
+                            <li><a href="travel.html">TRAVEL MAP</a></li>
+                            <li id="lastitem"><a href="photos.html">PHOTO GALLERY</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="form.html" class="current">CONTACT</a></li>
+                </ul>
+            </nav>
+    
+        </header>
+
+        <main>
+            
+            <!-- placing image in aside for standardized formatting. Picture from http://consultanthr.ro/wp-content/uploads/2013/11/contactus1.jpg -->
+           <aside>
+                <img src="images/contact.jpg" alt="Contact us." width="300" height="178">
+           </aside> 
+            
+            <!-- inserting section -->
+            <section>
+                <h1><i>Would you like us to contact you?</i></h1>
+                <h2>Please fill out the form below:</h2>
+                
+                <!-- this form is linked to another page on my site which can only be navigated to by knowing the URL or successfully submitting the form 
+                    the submit button will call the validation function, using 'this' keyword in the validateForm function to submit contained form values after being triggered by the onsubmit handler
+                    also using htmlspecialcharacters to prevent XSS attacks -->
+                <form name="form" action="form.php" onsubmit="return validateForm(this);" method="post">
+                    <fieldset>
+                        <legend>Send us your contact info</legend>
+                        <!-- required fields -->
+                        <p><label for="firstName" class="text">First name:</label>
+                        <input type="text" name="firstName" placeholder="(Required) Enter your first name" id="firstName" onchange="firstNameValidate();"></p>
+                        
+                        <p><label for="lastName" class="text">Last name:</label>
+                        <input type="text" name="lastName" placeholder="(Required) Enter your last name" id="lastName" onchange="lastNameValidate();"></p>
+                        
+                        <p><label for="phoneNumber" class="text">Phone number:</label>
+                        <input type="tel" name="phoneNumber" placeholder="(Required) 555-555-5555" id="phoneNumber" onchange="phoneNumberValidate();"></p>
+                        
+                        <!-- used type=text instead of type=email since it causes input validation conflicts -->
+                        <p><label for="email" class="text">E-mail:</label>
+                        <input type="text" name="email" placeholder="(Required) yourAddress@email.com" id="email" onchange="emailValidate();"></p>
+                        
+                        <!-- optional fields -->
+                        <p><label for="marketing" class="text">How did you find out about us:</label>
+                        <input type="text" name="marketing" placeholder="Friend, television, email, etc." id="marketing"></p>
+                        
+                        <p><label for="comments">Comments:</label>
+                        <textarea name="comments" placeholder="Please enter any comments, questions, or concerns here." id="comments"></textarea></p>
+         
+                        <p><input type="submit" name="submitButton" value="Submit" id="submit"></p>
+                        
+                    </fieldset>
+                </form>              
+            </section>
+        </main>
+
+        <!-- gibberish to make my page look legitimate -->
+        <footer>
+            <p>&copy; Copyright 2015 Justin Anderson. Contact me by <a href="mailto:luftwaffe808@gmail.com">email</a> or <a href="tel:229-234-0576">phone</a>.</p>
+        </footer>
+
+        <!-- script for floating social bar and div that it's built in -->
+        <script>
+        $.contactButtons({
+          effect  : 'slide-on-scroll',
+          buttons : {
+            'facebook':   { class: 'facebook',  use: true, icon: 'facebook',    link: 'https://www.facebook.com/luftwaffe808', title: 'Follow me on Facebook', extras: 'target="_blank"' },
+            'linkedin':   { class: 'linkedin',  use: true, icon: 'linkedin',    link: 'https://www.linkedin.com/in/justinscottanderson', title: 'Visit me on LinkedIn', extras: 'target="_blank"' },
+            'twitter':    { class: 'twitter',   use: true, icon: 'twitter',     link: 'https://twitter.com/luftwaffe808', title: 'Follow on Twitter', extras: 'target="_blank"' },
+            'phone':      { class: 'phone',     use: true, icon: 'phone',       link: '1-229-234-0576', title: 'Call me', type: 'phone' },
+            'email':      { class: 'email',     use: true, icon: 'envelope',    link: 'luftwaffe808@gmail.com', title: 'Send me an email', type: 'email' }
+              }
+            });
+        </script>
+        <div id="contact-buttons-bar" class="slide-on-scroll" data-top="120px" style="left: 0px;"></div>
+    </body>
+
+</html>

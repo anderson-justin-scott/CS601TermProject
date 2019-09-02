@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <!-- setting charset to utf-8 to eliminate validation error -->
+        <meta charset="utf-8">
+        
+        <title>Investing | Justin Anderson</title>
+
+        <!-- USAF Symbol linked as favicon -->
+        <link rel="shortcut icon" href="images/favicon.ico">
+
+        <link rel="stylesheet" href="css/normalize.css" media="screen">
+        <link rel="stylesheet" href="css/main.css" media="screen">
+        <link rel="stylesheet" href="css/print.css" media="print"> 
+        <!-- including social media slider from http://www.jqueryscript.net/social-media/jQuery-Plugin-For-Floating-Social-Share-Contact-Sidebar.html -->
+        <link rel="stylesheet" href="css/contact-buttons.css">
+        <!-- using font-awesome for social bar icons -->
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">        
+        
+        <!-- Description and Keywords provided to help web crawlers index page/SEO -->
+        <meta name="description" content="A developing series of Justin Anderson's hobbies">
+        <meta name="keywords" content="Investing, Air Force, Officer, Justin, Anderson, Hobbies, Value">
+
+        <!-- link to jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <!-- JavaScript for floating social bar -->
+        <script src="js/jquery.contact-buttons.js"></script>
+            
+    </head>
+
+    <body>
+
+        <header>
+            <!--  logo courtesy of logomakr.com, images for Beer graphic by <a href="http://www.freepik.com/">Freepik</a> and 
+            * Thin Stroke graphic by <a href="http://victorerixon.com">Victor Erixon</a> from <a href="http://www.flaticon.com/">Flaticon</a> are licensed under <a href="http://creativecommons.org/licenses/by/3.0/" 
+            * title="Creative Commons BY 3.0">CC BY 3.0</a>. Made with <a href="http://logomakr.com" title="Logo Maker">Logo Maker</a> -->
+            <h2 id="homelogo"><a href="index.html" title="Click me to go home"><img src="images/homelogo.png" width="556" height="131" alt="Justin Anderson Logo - navigate to Homepage"></a></h2>            
+            <!-- horizontal navigation bar across each page -->
+            <nav id="nav_menu"> 
+                <ul id="top">
+                    <li><a href="biography.html">BIOGRAPHY</a></li>
+                    <li><a href="resume.html">RESUM&Eacute;</a></li>
+                    <li><a id="swap">HOBBIES</a>
+                        <ul>
+                            <li><a href="investing.html" class="current">INVESTING</a></li>
+                            <li><a href="travel.html">TRAVEL MAP</a></li>
+                            <li id="lastitem"><a href="photos.html">PHOTO GALLERY</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="form.html">CONTACT</a></li>
+                </ul>
+                <!-- swaps hobbies drop-down with current page title, also abbreviates drop-down list -->
+                <script>$("#swap").replaceWith($(".current"));</script>
+            </nav>
+      
+        </header>
+
+        <main>
+            
+            <!-- this aside is used to contain the image map -->
+            <aside>
+                <!-- This figure contains an image map -->
+                <figure class="img">
+                    <img src="images/value_investing_giants.jpg" alt="Benjamin Graham, Warren Buffett, and Joel Greenblatt" width="400" height="133" usemap="#value_investing">
+                    <map id="value_investing" name="value_investing">
+                        <area shape="rect" alt="Benjamin Graham" title="Benjamin Graham" coords="0,0,132,131" href="https://en.wikipedia.org/wiki/Benjamin_Graham" target="_blank" />
+                        <area shape="rect" alt="Warren Buffett" title="Warren Buffett" coords="133,1,265,133" href="https://en.wikipedia.org/wiki/Warren_Buffett" target="_blank" />
+                        <area shape="rect" alt="Joel Greenblatt" title="Joel Greenblatt" coords="268,1,399,133" href="https://en.wikipedia.org/wiki/Joel_Greenblatt" target="_blank" />
+                    </map>
+                    <figcaption>Giants in value investing,<br>Benjamin Graham, Warren Buffett, and Joel Greenblatt<br><em>Click on their pictures to learn more</em></figcaption>
+                </figure>
+            </aside>
+                       
+            <article>
+                <h1><i>This page explains one of Justin&rsquo;s hobbies, value investing.</i></h1>
+                <h2>Value Investing</h2>
+                <p>According to <a href="http://www.investopedia.com/terms/v/valueinvesting.asp">investopedia.com</a>, value investing is defined as: &ldquo;The strategy of selecting stocks 
+                    that trade for less than their intrinsic values. Value investors actively seek stocks of companies that they believe the market has undervalued. They believe the 
+                    market overreacts to good and bad news, resulting in stock price movements that do not correspond with the company&rsquo;s long-term fundamentals. The result is an 
+                    opportunity for value investors to profit by buying when the price is deflated.&rdquo;</p>
+                    
+                <!-- video from youtube detailing value investing https://www.youtube.com/watch?v=KfDB9e_cO4k -->   
+                <p id="video"><video width="640" height="360" controls>
+                    <source src="video/value_investing.mp4" type="video/mp4">
+                    <source src="video/value_investing.webm" type="video/webm">
+                    This video is not supported by your browser.</video></p>
+                    
+                <h3>NCAV:</h3>
+                <p>Net Current Asset Value is a strategy created by the father of value investing, Benjamin Graham. This equation helped determine if a company was trading at a fair
+                    market price. NCAV is calculated by taking a company&rsquo;s current assets and subtracting the total liabilities, and then dividing the result by the number of
+                    shares outstanding.</p> 
+                
+                <!-- using figure for NCAV equation and a division ID for the divisor line -->   
+                <figure class="equation"><span id="division">(Current Assets - Total Liabilities)</span><br>Number Shares Outstanding</figure>
+                
+                <!-- table displaying data founda at http://www.oldschoolvalue.com/stock-screener/net-asset-current-value-ncav-stock-screen.php -->
+                <figure>
+                    <figcaption>Example NCAV Stocks</figcaption>
+                    <table>
+                         <thead>
+                            <tr>
+                                <th id="Ticker" scope="col">Ticker</th>
+                                <th id="Name" scope="col">Name</th>
+                                <th id="Market_Value" scope="col">Market Value</th>
+                                <th id="Volume" scope="col">Volume</th>
+                                <th id="Price/Cash" scope="col">Price/Cash</th>
+                            </tr>
+                        </thead>
+                        
+                        <tbody>
+                            <tr>
+                                <td>GIGM</td>
+                                <td>GigaMedia Ltd.</td>
+                                <td>$30.40</td>
+                                <td>64.072</td>
+                                <td>0.5</td>                               
+                            </tr>
+                            <tr>
+                                <td>LF</td>
+                                <td>LeapFrog Enterprises Inc.</td>
+                                <td>$61.48</td>
+                                <td>424,367</td>
+                                <td>0.7</td>                                
+                            </tr>
+                            <tr>
+                                <td>RBCN</td>
+                                <td>Rubicon Technology Inc.</td>
+                                <td>$33.30</td>
+                                <td>24,699</td>
+                                <td>0.9</td>                               
+                            </tr>
+                            <tr>
+                                <td>VSTM</td>
+                                <td>Verastem Inc.</td>
+                                <td>$78.60</td>
+                                <td>458,401</td>
+                                <td>0.6</td>                                
+                            </tr>
+                            <tr>
+                                <td>KBIO</td>
+                                <td>KaloBios Pharmaceuticals Inc.</td>
+                                <td>$3.80</td>
+                                <td>661,404</td>
+                                <td>0.2</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </figure>
+            </article>
+        </main>
+
+        <!-- gibberish to make my page look legitimate -->
+        <footer>
+            <p>&copy; Copyright 2015 Justin Anderson. Contact me by <a href="mailto:luftwaffe808@gmail.com">email</a> or <a href="tel:229-234-0576">phone</a>.</p>
+        </footer>
+        
+        <!-- script for floating social bar and div that it's built in -->
+        <script>
+        $.contactButtons({
+          effect  : 'slide-on-scroll',
+          buttons : {
+            'facebook':   { class: 'facebook',  use: true, icon: 'facebook',    link: 'https://www.facebook.com/luftwaffe808', title: 'Follow me on Facebook', extras: 'target="_blank"' },
+            'linkedin':   { class: 'linkedin',  use: true, icon: 'linkedin',    link: 'https://www.linkedin.com/in/justinscottanderson', title: 'Visit me on LinkedIn', extras: 'target="_blank"' },
+            'twitter':    { class: 'twitter',   use: true, icon: 'twitter',     link: 'https://twitter.com/luftwaffe808', title: 'Follow on Twitter', extras: 'target="_blank"' },
+            'phone':      { class: 'phone',     use: true, icon: 'phone',       link: '1-229-234-0576', title: 'Call me', type: 'phone' },
+            'email':      { class: 'email',     use: true, icon: 'envelope',    link: 'luftwaffe808@gmail.com', title: 'Send me an email', type: 'email' }
+              }
+            });
+        </script>
+        <div id="contact-buttons-bar" class="slide-on-scroll" data-top="120px" style="left: 0px;"></div>        
+    </body>
+
+</html>

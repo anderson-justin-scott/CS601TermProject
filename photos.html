@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <!-- setting charset to utf-8 to eliminate validation error -->
+        <meta charset="utf-8">
+        
+        <title>Photos | Justin Anderson</title>
+
+        <!-- USAF Symbol linked as favicon -->
+        <link rel="shortcut icon" href="images/favicon.ico">
+        
+        <!-- link to the lightbox css, courtest of http://www.lokeshdhakar.com/projects/lightbox2 -->
+        <link href="css/lightbox.css" rel="stylesheet" media="screen">
+        <link rel="stylesheet" href="css/normalize.css" media="screen">
+        <link rel="stylesheet" href="css/main.css" media="screen">
+        <link rel="stylesheet" href="css/print.css" media="print"> 
+        <!-- including social media slider from http://www.jqueryscript.net/social-media/jQuery-Plugin-For-Floating-Social-Share-Contact-Sidebar.html -->
+        <link rel="stylesheet" href="css/contact-buttons.css">
+        <!-- using font-awesome for social bar icons -->
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">        
+        
+        <!-- Description and Keywords provided to help web crawlers index page/SEO -->
+        <meta name="description" content="Justin Anderson's Travels">
+        <meta name="keywords" content="Europe, Photos, Air Force, Officer, Justin, Anderson, Travel, Life">
+        
+        <!-- importing Google CDN for jQuery 2.1.4 due to lightbox dependency -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <!-- JavaScript for floating social bar -->
+        <script src="js/jquery.contact-buttons.js"></script>
+        
+    </head>
+
+    <body>
+
+        <header>
+            <!--  logo courtesy of logomakr.com, images for Beer graphic by <a href="http://www.freepik.com/">Freepik</a> and 
+            * Thin Stroke graphic by <a href="http://victorerixon.com">Victor Erixon</a> from <a href="http://www.flaticon.com/">Flaticon</a> are licensed under <a href="http://creativecommons.org/licenses/by/3.0/" 
+            * title="Creative Commons BY 3.0">CC BY 3.0</a>. Made with <a href="http://logomakr.com" title="Logo Maker">Logo Maker</a> -->
+            <h2 id="homelogo"><a href="index.html" title="Click me to go home"><img src="images/homelogo.png" width="556" height="131" alt="Justin Anderson Logo - navigate to Homepage"></a></h2>            
+            <!-- horizontal navigation bar across each page -->
+            <nav id="nav_menu"> 
+                <ul id="top">
+                    <li><a href="biography.html">BIOGRAPHY</a></li>
+                    <li><a href="resume.html">RESUM&Eacute;</a></li>
+                    <li><a href="#" id="swap">HOBBIES</a>
+                        <ul>
+                            <li><a href="investing.html">INVESTING</a></li>
+                            <li><a href="travel.html">TRAVEL MAP</a></li>
+                            <li id="lastitem"><a href="photos.html" class="current">PHOTO GALLERY</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="form.html">CONTACT</a></li>
+                </ul>
+                <!-- swaps hobbies drop-down with current page title, also abbreviates drop-down list -->
+                <script>$("#swap").replaceWith($(".current"))</script>
+            </nav>
+    
+        </header>
+
+        <main>
+            
+            <!-- placing image in aside for standardized formatting lengthening for photos page -->
+           <aside id="gallery">
+                <img src="images/C130.jpg" alt="C-130 troop transport" width="400" height="310">
+           </aside> 
+            
+            <!-- inserting section for images -->
+            <section>
+                <h1><i>This page contains photos from Justin&rsquo;s travels.</i></h1>
+                          
+                <div class="images">
+                    <h2>Barcelona</h2>
+                    <p>
+                        <a href="images/lightbox/Barcelona.jpg" data-lightbox="barcelona" data-title="Parc Guell - Colleen &amp; Justin">
+                            <img src="images/thumbnails/Barcelona.png" width="231" height="173" alt="Image Barcelona">
+                        </a>
+                        <a href="images/lightbox/Barcelona2.jpg" data-lightbox="barcelona" data-title="La Sagrada Familia">
+                            <img src="images/thumbnails/Barcelona2.png" width="130" height="173" alt="Image Barcelona2">
+                        </a>
+                        <a href="images/lightbox/Barcelona3.jpg" data-lightbox="barcelona" data-title="La Sagrada Familia - Colleen &amp; Justin">
+                            <img src="images/thumbnails/Barcelona3.png" width="130" height="173" alt="Image Barcelona3">
+                        </a>
+                        <a href="images/lightbox/Barcelona4.jpg" data-lightbox="barcelona" data-title="Parc Guell">
+                            <img src="images/thumbnails/Barcelona4.png" width="231" height="173" alt="Image Barcelona4">
+                        </a>
+                        <a href="images/lightbox/Barcelona5.jpg" data-lightbox="barcelona" data-title="Barcelona beaches">
+                            <img src="images/thumbnails/Barcelona5.png" width="231" height="173" alt="Image Barcelona5">
+                        </a>
+                    </p> 
+                    
+                    <h2>Venice</h2>
+                    <p>
+                        <a href="images/lightbox/Venice.jpg" data-lightbox="venice" data-title="Santa Maria della Salute">
+                            <img src="images/thumbnails/Venice.png" width="130" height="173" alt="Image Venice">
+                        </a>
+                        <a href="images/lightbox/Venice2.jpg" data-lightbox="venice" data-title="Venetian Canals">
+                            <img src="images/thumbnails/Venice2.png" width="130" height="173" alt="Image Venice2">
+                        </a>
+                        <a href="images/lightbox/Venice3.jpg" data-lightbox="venice" data-title="Venice with Colleen, Justin, Ryan, Courtney, and Anh-Minh">
+                            <img src="images/thumbnails/Venice3.png" width="231" height="173" alt="Image Venice3">
+                        </a>
+                        <a href="images/lightbox/Venice4.jpg" data-lightbox="venice" data-title="Piazza San Marco">
+                            <img src="images/thumbnails/Venice4.png" width="130" height="173" alt="Image Venice4">
+                        </a>
+                        <a href="images/lightbox/Venice5.jpg" data-lightbox="venice" data-title="Arsenale Di Venezia">
+                            <img src="images/thumbnails/Venice5.png" width="231" height="173" alt="Image Venice5">
+                        </a>
+                    </p>   
+                    
+                    <h2>Amsterdam</h2>
+                    <p>
+                        <a href="images/lightbox/Amsterdam.jpg" data-lightbox="amsterdam" data-title="Amsterdam Windmill">
+                            <img src="images/thumbnails/Amsterdam.png" width="130" height="173" alt="Image Amsterdam">
+                        </a>
+                        <a href="images/lightbox/Amsterdam2.jpg" data-lightbox="amsterdam" data-title="I Amsterdam Sign">
+                            <img src="images/thumbnails/Amsterdam2.png" width="130" height="173" alt="Image Amsterdam2">
+                        </a>
+                        <a href="images/lightbox/Amsterdam3.jpg" data-lightbox="amsterdam" data-title="Heineken Factory">
+                            <img src="images/thumbnails/Amsterdam3.png" width="130" height="173" alt="Image Amsterdam3">
+                        </a>
+                        <a href="images/lightbox/Amsterdam4.jpg" data-lightbox="amsterdam" data-title="Red Light District">
+                            <img src="images/thumbnails/Amsterdam4.png" width="130" height="173" alt="Image Amsterdam4">
+                        </a>
+                        <a href="images/lightbox/Amsterdam5.jpg" data-lightbox="amsterdam" data-title="Biking by the Boat Homes">
+                            <img src="images/thumbnails/Amsterdam5.png" width="231" height="173" alt="Image Amsterdam5">
+                        </a>
+                    </p> 
+                    
+                    <h2>Rome</h2>
+                    <p>
+                        <a href="images/lightbox/Rome.jpg" data-lightbox="rome" data-title="Colleseo - Colleen &amp; Justin">
+                            <img src="images/thumbnails/Rome.png" width="130" height="173" alt="Image Rome">
+                        </a>
+                        <a href="images/lightbox/Rome2.jpg" data-lightbox="rome" data-title="Basilica Aemilia">
+                            <img src="images/thumbnails/Rome2.png" width="231" height="173" alt="Image Rome2">
+                        </a>
+                        <a href="images/lightbox/Rome3.jpg" data-lightbox="rome" data-title="View of Rome from the top of St. Peter&rsquo;s Basilica">
+                            <img src="images/thumbnails/Rome3.png" width="231" height="173" alt="Image Rome3">
+                        </a>
+                        <a href="images/lightbox/Rome4.jpg" data-lightbox="rome" data-title="Piazza Navona">
+                            <img src="images/thumbnails/Rome4.png" width="130" height="173" alt="Image Rome4">
+                        </a>
+                        <a href="images/lightbox/Rome5.jpg" data-lightbox="rome" data-title="Imperial Forum">
+                            <img src="images/thumbnails/Rome5.png" width="130" height="173" alt="Image Rome5">
+                        </a>
+                    </p>   
+                    
+                    <h2>Vatican City</h2>
+                    <p>
+                        <a href="images/lightbox/VaticanCity.jpg" data-lightbox="vatican" data-title="Saint Peter&rsquo;s Square - Colleen &amp; Justin">
+                            <img src="images/thumbnails/VaticanCity.png" width="130" height="173" alt="Image VaticanCity">
+                        </a>
+                        <a href="images/lightbox/VaticanCity2.jpg" data-lightbox="vatican" data-title="Vatican City Golden Globe">
+                            <img src="images/thumbnails/VaticanCity2.png" width="130" height="173" alt="Image VaticanCity2">
+                        </a>
+                        <a href="images/lightbox/VaticanCity3.jpg" data-lightbox="vatican" data-title="Saint Peter&rsquo;s Basilica">
+                            <img src="images/thumbnails/VaticanCity3.png" width="130" height="173" alt="Image VaticanCity3">
+                        </a>
+                        <a href="images/lightbox/VaticanCity4.jpg" data-lightbox="vatican" data-title="Saint Peter&rsquo;s Basilica Rooftops">
+                            <img src="images/thumbnails/VaticanCity4.png" width="130" height="173" alt="Image VaticanCity4">
+                        </a>
+                        <a href="images/lightbox/VaticanCity5.jpg" data-lightbox="vatican" data-title="Vatican Museum">
+                            <img src="images/thumbnails/VaticanCity5.png" width="231" height="173" alt="Image VaticanCity5">
+                        </a>
+                    </p>                            
+                </div>
+    
+            </section>
+        </main>
+
+        <!-- gibberish to make my page look legitimate -->
+        <footer>
+            <p>&copy; Copyright 2015 Justin Anderson. Contact me by <a href="mailto:luftwaffe808@gmail.com">email</a> or <a href="tel:229-234-0576">phone</a>.</p>
+        </footer>
+        
+        <!-- link to lightbox JavaScript and options -->
+        <script src="js/lightbox.js">
+
+         </script>
+         
+        <!-- script for floating social bar and div that it's built in -->
+        <script>
+        $.contactButtons({
+          effect  : 'slide-on-scroll',
+          buttons : {
+            'facebook':   { class: 'facebook',  use: true, icon: 'facebook',    link: 'https://www.facebook.com/luftwaffe808', title: 'Follow me on Facebook', extras: 'target="_blank"' },
+            'linkedin':   { class: 'linkedin',  use: true, icon: 'linkedin',    link: 'https://www.linkedin.com/in/justinscottanderson', title: 'Visit me on LinkedIn', extras: 'target="_blank"' },
+            'twitter':    { class: 'twitter',   use: true, icon: 'twitter',     link: 'https://twitter.com/luftwaffe808', title: 'Follow on Twitter', extras: 'target="_blank"' },
+            'phone':      { class: 'phone',     use: true, icon: 'phone',       link: '1-229-234-0576', title: 'Call me', type: 'phone' },
+            'email':      { class: 'email',     use: true, icon: 'envelope',    link: 'luftwaffe808@gmail.com', title: 'Send me an email', type: 'email' }
+              }
+            });
+        </script>
+        <div id="contact-buttons-bar" class="slide-on-scroll" data-top="120px" style="left: 0px;"></div>        
+    </body>
+
+</html>

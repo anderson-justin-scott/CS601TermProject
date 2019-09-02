@@ -1,0 +1,498 @@
+/* reset selector */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/* styles for the elements */
+html {
+	background-color: white;
+	height: 100%;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+}
+ 
+a:focus, a:hover {
+	font-style: italic;
+}
+
+em {
+	font-weight: bold;
+}
+
+/* styles for the header */
+header {
+	width: 100%;
+	height: 136px;
+	position: fixed;
+	top: 0;
+	z-index: 2;
+	border-bottom: 3px solid #1F6795;
+	/* matching background color to rounded corners within the body border, also using 12px to get rid of remaining white space */
+	background-image: -webkit-linear-gradient(45deg, #1F6795 556px, #B2D6EE 100%);
+	background-image: -moz-linear-gradient(45deg, #1F6795 556px, #B2D6EE 100%);
+	background-image: -o-linear-gradient(45deg, #1F6795 556px, #B2D6EE 100%);
+	background-image: linear-gradient(45deg, #1F6795 556px, #B2D6EE 100%);
+}
+
+/* style for homepage logo in header */
+h2#homelogo {
+	float: left;
+	/* allows nav bar to overlap logo */
+	position: absolute;
+}
+
+/* styles for the main section */
+main {
+    background-color: white;
+    /* fixes header and offsets main content below */
+    margin-top: 139px;
+}
+
+/* css applies to all figcaptions */	
+main figcaption {
+	display: block; 
+	font-style: italic;
+	text-align: center;
+	border-bottom: 3px solid #1F6795; 
+}
+
+/* general rules for headers below, followed by stricter rules for particular pages */
+main h1 {
+	width: 80%;
+	font-size: 130%;
+	text-align: center;
+	color: #1F6795;		
+	border-bottom: 3px solid #1F6795;
+	padding: .5em 0 .5em 0;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+main h2 {
+	/* clears text below h1 */
+	clear: left;
+	color: #387BA6;	
+	font-size: 125%;
+	padding-bottom: .5em;
+	padding-left: .5em;
+}
+
+main h3 {
+	color: #1F6795;	
+	font-size: 110%;
+	padding-bottom: .5em;
+	padding-left: .5em;
+}
+
+/* bullets using squares */
+main ul {
+	list-style: none;
+	padding: 0;
+	margin-bottom: 1em;
+	margin-left: 3em;
+}
+
+main li {
+	text-indent: 1em;
+	line-height: 1.5em;
+	list-style-type: square;
+}
+
+/* styles for home page */
+html#backgroundImage {
+	background-image: url("../images/background.jpg");
+	height: 100%;
+}
+
+main#home {
+	height: 800px;
+	background: none;
+}
+
+div#homepage {
+	width: 1200px;
+	height: 500px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 50px;
+}
+
+#homepage ul {
+	/* resetting margin and padding for lists on the home page */
+	margin: 0;
+	padding: 0;
+}
+
+/* floats all body elements besides aside */
+article, section {
+	float: left;
+	width: 800px;
+	margin-left: 5em;
+}
+
+/* class used for my biography page */
+article.bio {
+	width: 800px;
+	margin-top: 1em;
+	margin-left: auto;
+	margin-right: auto;
+    padding: 1em;
+    border: 3px solid #1F6795;
+    border-radius: 15px;
+	/* using prefixes to enable column properties on primary browsers */
+	-webkit-column-count: 2; 
+	-moz-column-count: 2; 
+	column-count: 2; 
+	
+	-webkit-column-rule: 2px solid #1F6795; 
+	-moz-column-rule: 2px solid #1F6795; 
+	column-rule: 2px solid #1F6795; 
+	
+	-webkit-column-gap: 2em;
+	-moz-column-gap: 2em; 
+	column-gap: 2em;
+}
+
+/* this section modifies the aside elements */
+aside {
+	float: left;
+	width: 500px;
+	height: 1200px;
+	border-right: 3px solid #1F6795;
+	background-color: #B2D6EE;
+}
+
+aside#gallery {
+	height: 2500px;
+}
+
+aside img {
+	display: block;
+	margin-top: 4em;
+	margin-left: auto;
+	margin-right: auto;
+	border: 3px solid #1F6795;
+	/* using border radius of 12px to round corners*/
+	border-radius: 12px;
+}
+
+/* css for video */
+article video {
+	clear: both;
+	margin: 1em;
+}
+
+p#video {
+	text-align: center;
+}
+
+article h2 {	
+	font-weight: bold;
+	font-style: italic;
+	padding-left: .5em;
+	padding-bottom: .5em;	
+}
+
+article p, section p {
+	padding: 0 .5em .5em .5em;
+	text-align: justify;
+	line-height: 1.3em;
+}
+
+article ol {
+	font-weight: bold;
+	padding: 0 0 1em 2em;
+	text-shadow: -3px 3px 5px #5e5045;
+}
+
+article li {
+	padding: .3em 0;
+}
+
+/* formatting for the travel page */
+.images h2 {
+	margin-bottom: 0;	
+}
+
+.images p{
+	margin: 0;
+	padding: 0;
+}
+
+.images img {
+	margin-top: 0;
+	margin-right: 2em;
+	margin-bottom: 3em;
+	float: left;
+	border: 1px solid #1F6795;
+	border-radius: 4px;
+}
+
+/* formatting for the Google Map page */
+#map_canvas {
+	margin-top: 180px;
+	margin-left: auto;
+	margin-right: auto;
+	border: 2px solid #1F6795;
+	border-radius: 5px;
+}
+
+#map_canvas img {
+	/* creates an even spacing in dialog box */
+	margin-left:25px;
+	margin-bottom: 20px;
+	border: 1px solid #1F6795;
+	border-radius: 3px;
+}
+
+/* these sections control the table layout */
+table {
+	border-collapse: collapse;
+	border: 1px solid #1F6795;
+	margin: 1em auto; 
+}
+
+td, th {
+	border: 1px solid #1F6795;
+	padding: .3em 1em .3em .3em;
+	font-weight: bold;
+}
+
+th {
+	border: 1px solid #B2D6EE;
+	color: #B2D6EE;
+	background-color: #1F6795;
+}
+
+/* gives every other row a background color for better readability */
+tr:nth-child(even) {
+	background-color: #B2D6EE;
+}
+
+/* form formatting */
+form fieldset {
+	margin: 2em;
+}
+
+legend {
+	color: #387BA6;
+}
+
+input {
+	width: 90%;
+	margin-left: 2em;
+	display: block;
+}
+
+textarea {
+	width: 90%;
+	height: 200px;
+	margin-left: 2em;
+	display: block;
+}
+
+label {
+	width: 20em;
+	margin: .5em 1em 0 2em;
+	font-weight: bold;
+	text-align: left;	
+}
+
+/* assigned submit ID to submit button in order to align it and design */
+#submit {
+	width: 90%;
+	margin-top: 1em;
+	background-color: #B2D6EE;
+	box-shadow: 2px 2px 0 black;
+	padding: .25em;
+	font-weight: bold;
+}
+
+#submit:hover {
+	background-color: #387BA6;
+	color: #FFFFFF;
+}
+
+/* styles for the footer */
+footer {
+	/* holds footer at the bottom of the page regardless of floats above */
+	clear: both;
+	/* gradient enabled for primary browsers */
+	background-image: -webkit-linear-gradient(to right, #1F6795 0%, #B2D6EE 50%, #1F6795 100%);
+	background-image: -moz-linear-gradient(to right, #1F6795 0%, #B2D6EE 50%, #1F6795 100%);
+	background-image: -o-linear-gradient(to right, #1F6795 0%, #B2D6EE 50%, #1F6795 100%);
+	background-image: linear-gradient(to right, #1F6795 0%, #B2D6EE 50%, #1F6795 100%);
+	border-top: 3px solid #1F6795;
+	padding: 1em 0;
+	margin-top: 1em;
+}
+
+footer p {
+	width: 100%;
+	text-align: center;
+	font-style: italic;
+	color: #FFFFFF;
+	text-shadow: 2px 2px 5px #5e5045;
+}
+
+/* styles for classes and id */
+.name {
+	color: black;
+} 
+
+/* used for equation on Investing page */
+.equation {
+	width: 20em;
+	font-size: 80%;
+	font-weight: bold; 
+	text-align: center;
+	margin-bottom: 2em;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 1em;
+	border: 1px dashed #1F6795;
+	border-radius: 12px;
+}
+
+/* modifies accordion contents on resume page */
+#accordion div {
+	font-size: 80%;
+}
+
+.alignRight {
+	font-size: 80%;
+	float: right;
+	text-align: right;	
+}
+
+#experience li, #education li{
+	margin: .5em 0;
+}
+
+.ui-accordion-header {
+	background: #B2D6EE;
+}
+
+.ui-accordion-header-active {
+	background: white;
+}
+
+#accordion h2 {
+	color: #1F6795;
+}
+
+/* used on the biography page image */
+.negative {
+	/* neat transition that makes it look like a photo is being taken when you hover the cursor past the img */
+	transition: all 2s ease-in-out .5s;
+	-webkit-transition: all 2s ease-in-out .5s;	
+}
+
+/* neat effect when you put your cursor over my biography image, doesn't work in all browsers */
+img:hover.negative  {
+	-webkit-filter: invert(100%);
+	filter: invert(100%);
+}
+
+/* ID used for divisor line on investing page */
+#division {
+	text-decoration: underline;
+}
+
+/* all nav_menu css applies to the navigation menu in the header */
+#nav_menu {
+	text-align: right;
+}
+
+#nav_menu ul#top { 
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+	white-space: nowrap;
+	list-style-type: none;	
+	margin-top: 82px;	
+	/* adding z-index to prevent body elements from overlapping drop-down */
+	z-index: 1;
+	position: relative;
+}
+
+#nav_menu ul li { 
+	float: left;
+	margin: 0 1em;
+	list-style-type: none; 
+}
+
+#nav_menu ul li a {
+	text-align: center;
+	display: block;
+	width: 175px;
+	padding: 1em 0; 
+	text-decoration: none;
+	background-color: #B2D6EE;
+	color: #1F6795;
+	font-weight: bold;
+	border-top: 2px solid #1F6795;
+	border-left: 2px solid #1F6795;
+	border-right: 2px solid #1F6795;
+} 
+
+#nav_menu ul ul {
+	display: none;
+	position: absolute;
+	top: 100%;
+}
+
+#nav_menu ul ul li {
+	float: none;
+	margin: 0;
+	padding: 0;
+}
+
+#nav_menu ul li:hover > ul {
+	display: block;
+}
+
+#nav_menu > ul::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+#nav_menu #lastitem {
+	border-bottom: 2px solid #1F6795;
+}
+
+/* whenever you hover your mouse over a link these settings activate */
+#nav_menu a:hover, #nav_menu a:focus {  
+	background-color: #1F6795;
+	color: #B2D6EE;
+}
+
+/* current class is used in the navigation bar to highlight the page the user is currently on */
+#nav_menu a.current {
+	background-color: #387BA6;
+	color: #B2D6EE;
+}
+
+/* this id is used for the successful form submission page */
+#formSubmitted {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5em;
+	margin-bottom: auto;
+	font-size: 2em;
+	color: #1F6795;
+	text-align: center;
+	padding: 1em;
+	border: 3px solid #1F6795;
+	/* using border radius of 12px to round corners*/
+	border-radius: 12px;
+	background-color: #B2D6EE;
+}

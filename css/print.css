@@ -1,0 +1,154 @@
+/* reset selector */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/* styles for the elements */
+html {
+	/* removed background image and set background to white for print sheet */
+	background-color: white;
+}
+
+@font-face {
+	font-family: Biography;
+	src: url("../images/PRISTINA.TTF");
+}
+
+body {
+	/* changed font family with more print-friendly fonts */
+	font-family: "Times New Roman", Times, serif;
+    font-size: 12pt;
+    /* setting body width to auto so it fits the page */
+    width: auto;
+    border: 2pt solid black;
+    border-radius: 11pt;
+    /* setting all background colors to white and all text to black for printability */
+    background-color: white;
+    color: black;
+}
+
+h1, h2 {
+	/* avoiding having the header printed on a page separate from the content */
+	page-break-after: avoid;
+}
+
+em {
+	font-weight: bold;
+}
+
+/* styles for the header */
+header {
+	/* setting height to auto so no space is wasted */
+	height: .75in;
+	border-bottom: 2pt solid black;
+	/* matching background color to rounded corners within the body border, also using 12px to get rid of remaining white space */
+	border-radius: 9pt 9pt 0 0;
+	padding-top: .1in;
+	vertical-align: middle;
+}
+
+header img {
+	/* hiding image so it will print faster and save money on ludicrous ink prices */
+	display: none;
+}
+
+header h2 {
+	font-size: 48pt;
+	/* specifying special font; if browser can't display that font then a default font from the body section will be used */
+	font-family: Biography;
+	text-align: center;
+}
+
+/* styles for the main section */
+main {
+	/* though not absolutely necessary, clearing main so future modifications don't cause issues */
+	clear: both;
+}
+
+main h1 {
+	font-size: 18pt;
+	text-align: center;
+	border: 2pt double black;
+	border-radius: 6pt;
+	margin: .1in .1in;
+}
+
+/* styles for article sub-section under main */
+article {
+	/* using prefixes to enable column properties on primary browsers, won't work in Chrome 
+	 - http://stackoverflow.com/questions/25196475/multicolumn-css-does-not-work-on-print*/
+	-webkit-column-count: 2; 
+	-moz-column-count: 2; 
+	column-count: 2; 
+	
+	-webkit-column-rule: 1pt solid black; 
+	-moz-column-rule: 1pt solid black; 
+	column-rule: 1pt solid black; 
+	
+	-webkit-column-gap: .1in;
+	-moz-column-gap: .1in; 
+	column-gap: .1in;
+	
+	width: auto;
+}
+
+article h2 {
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: italic;
+	text-indent: .1in;
+	padding-bottom: .05in;
+	text-decoration: underline;	
+}
+
+article p {
+	padding: 0 .1in .1in .1in;
+	text-align: justify;
+	text-indent: .2in;
+	line-height: .2in;
+	/* orphans and widows are sad, so I'm pairing them up with a few other friends */
+	orphans: 3;
+	widows: 3;
+}
+
+article ol {
+	/* not padding top since article p is already providing padding */
+	font-weight: bold;
+	padding-left:.5in;
+	/* lists look silly when they're on separate pages */
+	page-break-before: avoid;
+}
+
+article li {
+	/* lists look silly when they're on separate pages */
+	page-break-before: avoid;
+	padding-bottom: .05in;
+}
+
+article a {
+	/* attempting to stop links from printing on separate pages */
+	page-break-inside: avoid;
+}
+
+/* styles for the footer */
+footer {
+	border-top: 2pt solid black;
+	/* matching background color to rounded corners in the body border, using 12px to get rid of remaining white space */
+	border-radius: 0 0 9pt 9pt;
+	padding: .1in 0;
+}
+
+footer p {
+	font-size: 10pt;
+	text-align: center;
+	vertical-align: middle;
+	font-style: italic;
+	color: black;
+}
+
+/* styles for classes */
+.name {
+	color: black;
+}

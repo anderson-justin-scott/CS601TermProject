@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" id="backgroundImage">
+
+    <head>
+        <!-- setting charset to utf-8 to eliminate validation error -->
+        <meta charset="utf-8">
+        
+        <title>Home | Justin Anderson</title>
+
+        <!-- USAF Symbol linked as favicon -->
+        <link rel="shortcut icon" href="images/favicon.ico">
+
+        <link rel="stylesheet" href="css/normalize.css" media="screen">
+        <link rel="stylesheet" href="css/main.css" media="screen">
+        <link rel="stylesheet" href="css/print.css" media="print">
+        <!-- including bxslider css, sourced from http://bxslider.com/ credit goes to Steven Wanderski -->
+        <link href="lib/jquery.bxslider.css" rel="stylesheet" /> 
+        <!-- including social media slider from http://www.jqueryscript.net/social-media/jQuery-Plugin-For-Floating-Social-Share-Contact-Sidebar.html -->
+        <link rel="stylesheet" href="css/contact-buttons.css">
+        <!-- using font-awesome for social bar icons -->
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+        
+        <!-- Description and Keywords provided to help web crawlers index page/SEO -->
+        <meta name="description" content="Justin Anderson's Home Page">
+        <meta name="keywords" content="Home, Air Force, Officer, Justin, Anderson, index, main">       
+        
+        <!-- link to jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <!-- JavaScript for floating social bar -->
+        <script src="js/jquery.contact-buttons.js"></script>
+        <!-- including bx slider JavaScript file, sourced from http://bxslider.com/ credit goes to Steven Wanderski -->
+        <script src="js/jquery.bxslider.min.js"></script>
+        <script src="js/homepage.js"></script>        
+
+    </head>
+
+    <body>
+        
+        <header>  
+            <!--  logo courtesy of logomakr.com, images for Beer graphic by <a href="http://www.freepik.com/">Freepik</a> and 
+            * Thin Stroke graphic by <a href="http://victorerixon.com">Victor Erixon</a> from <a href="http://www.flaticon.com/">Flaticon</a> are licensed under <a href="http://creativecommons.org/licenses/by/3.0/" 
+            * title="Creative Commons BY 3.0">CC BY 3.0</a>. Made with <a href="http://logomakr.com" title="Logo Maker">Logo Maker</a> -->
+            <h2 id="homelogo"><a href="index.html" title="Click me to go home"><img src="images/homelogo.png" width="556" height="131" alt="Justin Anderson Logo - navigate to Homepage"></a></h2>  
+            <nav id="nav_menu"> 
+                <ul id="top">
+                    <li><a href="biography.html">BIOGRAPHY</a></li>
+                    <li><a href="resume.html">RESUM&Eacute;</a></li>
+                    <li><a href="#">HOBBIES</a>
+                        <ul>
+                            <li><a href="investing.html">INVESTING</a></li>
+                            <li><a href="travel.html">TRAVEL MAP</a></li>
+                            <li id="lastitem"><a href="photos.html">PHOTO GALLERY</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="form.html">CONTACT</a></li>
+                </ul>
+            </nav>
+  
+        </header>
+
+        <main id="home">
+            <div id="homepage">
+                <!-- main homepage images displayed using bxslider -->
+                <ul class="bxslider">
+                  <li><a href="resume.html"><img src="images/homepage/resume_photo.jpg" title="View my Resum&eacute;" width="1200" height="500" alt="View my Resum&eacute;"/></a></li>
+                  <li><a href="biography.html"><img src="images/homepage/Barcelona.jpg" title="Read my Biography" width="1200" height="500" alt="Read my Biography"/></a></li>
+                  <li><a href="travel.html"><img src="images/homepage/travel.jpg" title="Check out my Travel Map" width="1200" height="500" alt="Check out my Travel Map"/></a></li>
+                  <li><a href="investing.html"><img src="images/homepage/value_investing.jpg" title="Learn about Value Investing" width="1200" height="500" alt="Learn about Value Investing"/></a></li>
+                  <li><a href="photos.html"><img src="images/homepage/venice.jpg" title="Look through the Photo Gallery" width="1200" height="500" alt="Look through the Photo Gallery"/></a></li>
+                </ul>
+            </div>   
+        </main>
+
+        <!-- gibberish to make my page look legitimate -->
+        <footer>
+            <p>&copy; Copyright 2015 Justin Anderson. Contact me by <a href="mailto:luftwaffe808@gmail.com">email</a> or <a href="tel:229-234-0576">phone</a>.</p>
+        </footer>
+        
+        <!-- script for floating social bar and div that it's built in -->
+        <script>
+        $.contactButtons({
+          effect  : 'slide-on-scroll',
+          buttons : {
+            'facebook':   { class: 'facebook',  use: true, icon: 'facebook',    link: 'https://www.facebook.com/luftwaffe808', title: 'Follow me on Facebook', extras: 'target="_blank"' },
+            'linkedin':   { class: 'linkedin',  use: true, icon: 'linkedin',    link: 'https://www.linkedin.com/in/justinscottanderson', title: 'Visit me on LinkedIn', extras: 'target="_blank"' },
+            'twitter':    { class: 'twitter',   use: true, icon: 'twitter',     link: 'https://twitter.com/luftwaffe808', title: 'Follow on Twitter', extras: 'target="_blank"' },
+            'phone':      { class: 'phone',     use: true, icon: 'phone',       link: '1-229-234-0576', title: 'Call me', type: 'phone' },
+            'email':      { class: 'email',     use: true, icon: 'envelope',    link: 'luftwaffe808@gmail.com', title: 'Send me an email', type: 'email' }
+              }
+            });
+        </script>
+        <div id="contact-buttons-bar" class="slide-on-scroll" data-top="120px" style="left: 0px;"></div>
+    </body>
+
+</html>
