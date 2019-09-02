@@ -5,6 +5,6 @@ Created a personal website using HTML5, CSS, JavaScript, and PHP. Includes Googl
 
 ![Term Project Home Page](CS601_Homepage.PNG)
 
-![Term Project Collage](Collage.PNG)
+![Term Project Collage](CS601_Collage.png)
 
 This project can be run using any static web server. You can download XAMPP to host an Apache localhost server and navigate to the folder from there. 
